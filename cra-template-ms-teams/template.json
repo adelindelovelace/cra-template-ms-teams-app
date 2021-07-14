@@ -1,4 +1,5 @@
 {
+    "package":{
     "dependencies": {
         "@fluentui/example-data": "^8.2.0",
         "@fluentui/react": "^8.14.2",
@@ -27,6 +28,7 @@
         "typestyle": "^2.1.0",
         "utils.js": "^1.0.1",
         "web-vitals": "^1.1.1"
+    }
     },
     "scripts": {
         "start": "react-scripts start",
