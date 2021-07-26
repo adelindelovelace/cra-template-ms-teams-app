@@ -46,6 +46,7 @@ class Homepage extends React.Component<{}, any> {
   componentDidMount() {
     microsoftTeams.initialize();
     microsoftTeams.getContext((context: microsoftTeams.Context) => {
+      this.setState({ context: context });
       addObjectToLocalStorage(context, StorageNames.Context);  
       
       // TO ADD: 
@@ -55,7 +56,7 @@ class Homepage extends React.Component<{}, any> {
 
   render() {
     let msEntityId = this.state?.context?.entityId;
-    if (msEntityId === "MS Teams React App" || msEntityId === undefined) {
+    if (msEntityId === "MS Teams React App") {
       return (
         <div>
           <main>
